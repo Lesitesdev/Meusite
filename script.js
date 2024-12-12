@@ -20,3 +20,12 @@ window.onload = function() {
   const homeContent = document.querySelector('.home-conten');
   homeContent.style.opacity = 1; // Torna o conteúdo visível após o carregamento
 };
+
+
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+      const answer = question.nextElementSibling; // Seleciona a resposta correspondente
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block'; // Alterna a visibilidade
+  });
+});
